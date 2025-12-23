@@ -1,1 +1,57 @@
-
+{
+  "name": "ServiceLookup",
+  "type": "object",
+  "properties": {
+    "year": {
+      "type": "string",
+      "description": "Vehicle year"
+    },
+    "make": {
+      "type": "string",
+      "description": "Vehicle manufacturer"
+    },
+    "model": {
+      "type": "string",
+      "description": "Vehicle model"
+    },
+    "engine": {
+      "type": "string",
+      "description": "Engine type/size"
+    },
+    "drivetrain": {
+      "type": "string",
+      "description": "Drivetrain type (FWD, RWD, AWD, 4WD)"
+    },
+    "service_type": {
+      "type": "string",
+      "description": "Type of service being performed"
+    },
+    "results": {
+      "type": "object",
+      "description": "AI-generated results",
+      "properties": {
+        "parts": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "specifications": {
+          "type": "object"
+        },
+        "guides": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "year",
+    "make",
+    "model",
+    "service_type"
+  ]
+}
